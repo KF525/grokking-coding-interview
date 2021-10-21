@@ -2,6 +2,7 @@ package bfs;
 
 import bfs.util.NodeWithLevel;
 import bfs.util.TreeNode;
+import com.sun.java.accessibility.util.TopLevelWindowListener;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -9,24 +10,22 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * Given a binary tree, populate an array to represent the averages of all of its levels.
+ * Find the largest value on each level of a binary tree.
  */
-public class LevelAveragesBinaryTreeProblem {
+public class LargestValueOnEachLevelProblem {
 
-    public List<Double> findLevelAverages(TreeNode root) {
-        List<Double> result = new ArrayList<>();
+    public List<Integer> getLargestLevelValues(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
         if (root == null) return result;
         Queue<NodeWithLevel> queue = new LinkedList<>();
         queue.add(new NodeWithLevel(root, 1));
+        int maxLevelValue = Integer.MIN_VALUE;
         int currentLevel = 1;
-        double currentSum = 0.0;
-        int currentSize = 0;
 
         while (!queue.isEmpty()) {
             if (queue.peek().level == currentLevel) {
                 NodeWithLevel nodeWithLevel = queue.remove();
-                currentSum = currentSum + nodeWithLevel.node.val;
-                currentSize++;
+                maxLevelValue = Math.max(nodeWithLevel.node.val, maxLevelValue);
                 if (nodeWithLevel.node.left != null) {
                     queue.add(new NodeWithLevel(nodeWithLevel.node.left, currentLevel + 1));
                 }
@@ -34,14 +33,13 @@ public class LevelAveragesBinaryTreeProblem {
                     queue.add(new NodeWithLevel(nodeWithLevel.node.right, currentLevel + 1));
                 }
             } else {
+                result.add(maxLevelValue);
+                maxLevelValue = Integer.MIN_VALUE;
                 currentLevel++;
-                result.add(currentSum/currentSize);
-                currentSum=0.0;
-                currentSize=0;
             }
         }
 
-        result.add(currentSum/currentSize);
+        result.add(maxLevelValue);
 
         return result;
     }
