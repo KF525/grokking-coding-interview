@@ -12,7 +12,7 @@ class BinaryTreeLevelOrderTraversalProblemTest {
     BinaryTreeLevelOrderTraversalProblem problem = new BinaryTreeLevelOrderTraversalProblem();
 
     @Test
-    public void traverseReturnsNodeListByLevel() {
+    void traverseReturnsNodeListByLevel() {
         TreeNode root = new TreeNode(12);
         root.left = new TreeNode(7);
         root.right = new TreeNode(1);

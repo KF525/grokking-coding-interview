@@ -12,7 +12,7 @@ class ZigZagTraversalProblemTest {
     ZigZagTraversalProblem problem = new ZigZagTraversalProblem();
 
     @Test
-    public void traverseReturnsNodeListByLevelZigZag() {
+    void traverseReturnsNodeListByLevelZigZag() {
         TreeNode root = new TreeNode(12);
         root.left = new TreeNode(7);
         root.right = new TreeNode(1);
