@@ -3,6 +3,7 @@ package bfs;
 import bfs.util.NodeWithLevel;
 import bfs.util.TreeNode;
 import com.sun.java.accessibility.util.TopLevelWindowListener;
+import io.vavr.collection.Tree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

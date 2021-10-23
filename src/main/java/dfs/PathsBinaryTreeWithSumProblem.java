@@ -8,9 +8,9 @@ import java.util.List;
 /**
  * Given a binary tree and a number ‘S’, find all paths from root-to-leaf such that the sum of all the node values of each path equals ‘S’.
  */
-public class AllPathsBinaryTreeSumProblem {
+public class PathsBinaryTreeWithSumProblem {
 
-    public List<List<Integer>> findPaths(TreeNode root, int sum) {
+    public List<List<Integer>> findPathsWithSum(TreeNode root, int sum) {
         List<List<Integer>> allPaths = new ArrayList<>();
         List<Integer> currentPath = new ArrayList<>();
         allPathsHelper(root, sum, allPaths, currentPath);

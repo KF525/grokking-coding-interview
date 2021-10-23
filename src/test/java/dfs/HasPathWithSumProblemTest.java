@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BinaryTreePathSumProblemTest {
+class HasPathWithSumProblemTest {
 
-    BinaryTreePathSumProblem problem = new BinaryTreePathSumProblem();
+    HasPathWithSumProblem problem = new HasPathWithSumProblem();
 
     @Test
     void hasPathReturnsIfRootToLeafSums(){

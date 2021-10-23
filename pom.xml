@@ -108,6 +108,12 @@
                     <include>**/*.txt</include>
                 </includes>
             </resource>
+<!--            <dependency>-->
+<!--                <groupId>org.projectlombok</groupId>-->
+<!--                <artifactId>lombok</artifactId>-->
+<!--                <version>1.18.22</version>-->
+<!--                <scope>provided</scope>-->
+<!--            </dependency>-->
             <resource>
                 <targetPath>input</targetPath>
                 <filtering>false</filtering>

@@ -7,9 +7,9 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AllPathsBinaryTreeSumProblemTest {
+class PathsBinaryTreeWithSumProblemTest {
 
-    AllPathsBinaryTreeSumProblem problem = new AllPathsBinaryTreeSumProblem();
+    PathsBinaryTreeWithSumProblem problem = new PathsBinaryTreeWithSumProblem();
 
     @Test
     void findPathsReturnsAllValidPathsRootToLeaf() {
@@ -20,7 +20,7 @@ class AllPathsBinaryTreeSumProblemTest {
         root.right.left = new TreeNode(10);
         root.right.right = new TreeNode(5);
         int sum = 23;
-        List<List<Integer>> paths = problem.findPaths(root, sum);
+        List<List<Integer>> paths = problem.findPathsWithSum(root, sum);
         assertEquals(2, paths.size());
     }
 }
